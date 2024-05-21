@@ -1,0 +1,538 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+html, body{
+
+    height: 100%;
+    width: 100%;
+}
+
+
+html{
+    scrollbar-width: thin;
+
+}
+
+
+html{
+    scrollbar-color: #95C11E #000;
+    scroll-behavior: smooth;
+}
+
+
+
+
+::-webkit-scrollbar{
+
+    width: 0.5rem;
+    background-color: #000;
+
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 0.5rem;
+    background-color: #95C11E;
+}
+
+.nav{
+
+    height: 140px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 60px 150px;
+    gap: 30px;
+    position: fixed;
+    z-index: 999;
+}
+
+.nav a{
+
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+.nav img{
+
+    height: 80px;
+}
+
+.nav h3:hover{
+    cursor: pointer;
+}
+
+
+.cursor{
+
+    height: 20px;
+    width: 20px;
+    background-color: #95C11E;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+
+.cursor-blur{
+
+    height: 500px;
+    width: 500px;
+    background-color: #96c11e4e;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(50px);
+    transition: all linear 0.6s;
+    z-index: 9;
+}
+
+
+
+
+video{
+
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+.main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.396);
+
+
+}
+
+
+.page1{
+
+    height: 100vh;
+    width: 100%;
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 10;
+}
+
+
+.page1 h1{
+
+    font-size: 130px;
+    font-family: sans-serif;
+    font-weight: 900;
+    z-index: -1;
+    position: relative;
+
+}
+
+.page1 h3{
+    font-size: 31px;
+    font-weight: 900;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+.page1 p{
+
+    font-size: 17px;
+    width: 40%;
+    text-align: center;
+}
+
+.page1 h1::before{
+
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    color: black;
+    top: -4px;
+    left: -4px;
+    z-index: -1;    
+    -webkit-text-stroke: 2px #95C11E;
+
+}
+
+.down-arrow{
+
+    position: absolute;
+    /* background-color: red; */
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    border-radius: 50%;
+    bottom: 2%;
+    left: 2%;
+    border: 2px solid #95C11E;
+    z-index: 10;
+    transition: all ease 0.5s;
+}
+
+.down-arrow:hover{
+
+    scale: 0.4;
+    background-color: #95C11E;
+    border: none;
+
+}
+
+
+
+
+.page2{
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 7%;
+    z-index: 10;
+}
+
+.scroller{
+
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+    
+}
+
+.scroller::-webkit-scrollbar{
+    display: none;
+}
+
+.scroller-in{
+
+    display: inline-block;
+    animation: scroll linear 30s;
+    animation-iteration-count: infinite;
+
+}
+
+.scroller h4{
+
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 140px;
+    font-weight: 900;
+    margin-right: 50px;
+    -webkit-text-stroke: 2px #95C11E;
+    color: transparent;
+    transition: all linear 0.8s;
+}
+
+.scroller h4:hover{
+    color: #95C11E;
+}
+
+
+@keyframes scroll {
+    
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+
+}
+
+.about-us{
+    height: 50vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2%;
+    z-index: 10;
+
+}
+
+.about-us img{
+
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+
+}
+
+.about-us-info{
+
+    width: 60%;
+    text-align: center;
+    font-size: 25px;
+    font-family: sans-serif;
+    
+
+}   
+
+.about-us-info h1{
+    font-weight: 900;
+    font-size: 60px;
+    margin: 2% auto;
+}
+
+.card-container{
+    
+    height: 60vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 10;
+}
+
+.card{
+
+    height: 70%;
+    width: 25%;
+    /* background-color: blue; */
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px;
+    z-index: 10;
+    transition: all ease 0.6s;
+
+}
+
+#card1{
+    background-image: url(images/Card1.avif);
+}
+
+#card2{
+    background-image: url(images/Card2.avif);
+}
+
+#card3{
+    background-image: url(images/Card3.avif);
+}
+
+
+.overlay{
+
+    background-color: #95C11E;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    padding: 10% 6%;
+    overflow: hidden;
+    opacity: 0;
+    transition: all ease 0.8s;
+    
+
+}
+
+.overlay h1{
+
+    font-family: sans-serif;
+    padding-bottom: 3%;
+    color: #000;
+    font-size: 31px;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    font-weight: 800;
+
+}
+
+.overlay p{
+    font-size: 20px;
+    text-align: center;
+}
+
+.card:hover .overlay{
+    opacity: 1;
+    z-index: 100;
+}
+
+
+
+.page3{
+
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    /* z-index: 10; */
+}
+
+.page3 img{
+
+    height: 100px;
+    width: 100px;
+
+}
+
+.page3 #img1{
+    position: relative;
+    bottom: 160px;
+}
+
+.page3 #img2{
+    position: relative;
+    top: 140px;
+
+}
+
+
+.page3 p{
+
+    width: 60%;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+
+}
+
+
+
+
+
+
+.green-div{
+
+    height: 30vh;
+    background-color: #95C11E;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    background: linear-gradient(to left bottom, #119f3a,  #ACE022);
+    z-index: 10;
+}
+
+.green-div h4{
+
+    width: 50%;
+    font-family: sans-serif;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 900;
+    color: #000;
+    font-size: 27px;
+
+}
+
+.green-div img{
+
+    height: 100%;
+    width: 20%;
+    object-fit: cover;
+
+}
+
+
+.page4 {
+
+   height: 100vh; 
+   width: 100vw;
+   background-color: black;
+   z-index: 10;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+
+.formCardContainer{
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #95C11E;
+    padding: 2%;
+    border-radius: 10px;
+    background-image: url("https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-side.svg");
+    z-index: 10;
+
+
+}
+
+.formImg img{
+
+    height: 440px;
+    width: 400px;
+    object-fit: cover;
+}
+
+.formContainer{
+
+    background-color: rgb(46, 46, 46);
+    z-index: 10;
+}
+
+
+.contact {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+    z-index: 10;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Styling form elements */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: #119f3a;
+}
+
+textarea {
+    resize: vertical; /* Allowing vertical resizing */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
